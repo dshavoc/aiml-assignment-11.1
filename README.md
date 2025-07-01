@@ -3,7 +3,9 @@
 This is a homework assignment for an AI/ML class from UC Berkeley, 2025.  
 Required Assignment 11.1
 
-Jupyter Notebook: https://github.com/dshavoc/aiml-assignment-11.1/blob/master/assignment11_1.ipynb
+Final Jupyter Notebook: https://github.com/dshavoc/aiml-assignment-11.1/blob/master/assignment11_1.ipynb
+
+Early Jupyter notebook with unpolished developmental notes: https://github.com/dshavoc/aiml-assignment-11.1/blob/master/prompt_II_bloody.ipynb
 
 # Overview
 
@@ -170,6 +172,8 @@ The process of training this model through 4 hyperparameters and 3 folds took 4 
 
 ## Evaluation
 
+The evaluation metric is Root Mean Squared Error (RMSE), because its value is on the same scale as the input, so it's somewhat intuitive. The input is a combination of one-hot and normalized, lending the RMSE value toward a range of -1 to +1.
+
 | Model | Data Set | Train RMSE | Test RMSE |
 | -- | -- | -- | -- |
 | Model 0 - Simple Linear | 0 | 0.48839664260876164 | 0.48825000707798155
@@ -258,3 +262,7 @@ The two best-performing models predict the following parameter importance.
 | onehotencoder__type_sedan | -0.23024800085293107 | -0.4104215290136868
 | onehotencoder__manufacturer_dodge | -0.20837845488791476 | -0.1269422387296148
 | polynomialfeatures__odometer | -0.20317539462091533 | -0.20017640871931358
+
+## Next Steps
+* Procure better data with higher quality features, such as horsepower, and MSRP new.
+* Much of the data was thrown out because it didn't seem to fit a local linearization. Try creating multiple models that fit different regions of input space. Clustering could be used to identify the regions of input space and the number of models.
