@@ -266,3 +266,4 @@ The two best-performing models predict the following parameter importance.
 ## Next Steps
 * Procure better data with higher quality features, such as horsepower, and MSRP new.
 * Much of the data was thrown out because it didn't seem to fit a local linearization. Try creating multiple models that fit different regions of input space. Clustering could be used to identify the regions of input space and the number of models.
+* Transform weights back into terms of dollars by inverting the Standard Scaler and exponentiating the log of the price.
